@@ -50,8 +50,6 @@ sampler = RandomSampler(dataset) # To get random images each iteration
 original_dl = DataLoader(dataset, batch_size = cfg.batch_size, sampler = sampler, pin_memory=torch.cuda.is_available())
 
 
-#original_dl = DataLoader(dataset, batch_size = 64, shuffle = True, pin_memory=torch.cuda.is_available())
-#noise_dl = DataLoader(n_dataset, batch_size = 64, pin_memory=torch.cuda.is_available())
 
 def train():
     for epoch in tqdm(range(cfg.epochs)):
@@ -84,7 +82,9 @@ def train():
             # Adjust learning weights
             d_optimizer.step()
 
-        # Generator Optimization
+        ##############################
+        ## Generator Optimization 
+        ##############################
         g_optimizer.zero_grad()
         
         z = torch.randn(batch_size, cfg.latent_dim).to(cfg.device)
