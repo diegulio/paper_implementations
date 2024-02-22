@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "gan"
+version = "0.1.0"
+description = "Generative Adversarial Networks"
+authors = ["diegulio <68176588+diegulio@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^24.2.0"
+isort = "^5.13.2"
+torch = "^2.2.0"
+torchvision = "^0.17.0"
+tqdm = "^4.66.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
