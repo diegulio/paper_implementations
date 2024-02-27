@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dcgan"
+version = "0.1.0"
+description = ""
+authors = ["diegulio <68176588+diegulio@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^24.2.0"
+torch = "^2.2.1"
+torchvision = "^0.17.1"
+tqdm = "^4.66.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
